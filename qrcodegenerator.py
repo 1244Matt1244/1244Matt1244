@@ -1,15 +1,22 @@
 import qrcode
-import image
-qr = qrcode.QRCode(
-    version = 15, #15 means the version of the qr code high the number bigger the code image and complicated picture
-    box_size = 6, # size of the box where qr code will be displayed
-    border = 6  # it is the whit part of image -- border in all 4 sides with white color  
-)
+from PIL import Image
 
-data = "https://www.youtube.com/watch?v=vrfJF5QYLfQ"
+# Function to generate QR code
+def generate_qr_code(data, filename):
+    qr = qrcode.QRCode(
+        version=15,
+        box_size=6,
+        border=6
+    )
+    qr.add_data(data)
+    qr.make(fit=True)
+    img = qr.make_image(fill="black", back_color="white")
+    img.save(filename)
+    print(f"QR code saved as {filename}")
 
+# User input for data and filename
+data = input("Enter the data to be encoded in the QR code: ")
+filename = input("Enter the filename for the QR code (with .png extension): ")
 
-qr.add_data(data)
-qr.make(fit = True)
-img = qr.make_image(fill = "black",back_color = "white")
-img.save("test.png")
+# Generate QR code
+generate_qr_code(data, filename)
