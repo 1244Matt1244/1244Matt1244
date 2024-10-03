@@ -1,38 +1,46 @@
-### Documentation
-
-#### Overview
-The QR Code Generator is a Python script that uses the `qrcode` library to create QR codes and save them as image files. The script allows users to input data and specify a filename for the generated QR code.
-
-#### Prerequisites
-- Python 3.6 or higher
-- `qrcode` library
-- `PIL` (Pillow) library for image handling
-
-#### Installation
-1. Clone the repository to your local machine:
-    ```sh
-    git clone https://github.com/1244Matt1244/qrcode_generator.git
-    ```
-2. Install the required Python libraries:
-    ```sh
-    pip install qrcode pillow
-    ```
-
-#### Usage
-1. Run the script:
-    ```sh
-    python qrcode_generator.py
-    ```
-2. Enter the data to be encoded when prompted.
-3. Enter the desired filename with a `.png` extension.
-
-#### Maintenance
-- **Updates**: Check the GitHub repository for updates and new features.
-- **Backup**: Regularly backup your code and generated QR codes to prevent data loss.
-
-#### Contact
-For any issues or suggestions, please contact the repository maintainer at [your-contact-information].
-
 ---
 
-This documentation provides a comprehensive guide to setting up, running, and maintaining the QR Code Generator. For further customization or enhancements, refer to the source code and feel free to contribute to the project.
+# QR Code Generator with Logo Embedding
+
+This advanced QR Code generator allows you to create QR codes and embed logos or images in the center.
+
+## Features
+- Generate QR codes with custom data.
+- Embed logos or images into the center of the QR code.
+- Save QR codes as PNG files.
+
+## Prerequisites
+- **Python 3.6 or higher**
+- Install required libraries:
+  ```bash
+  pip install qrcode pillow
+  ```
+
+## Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/1244Matt1244/qrcode_generator.git
+   ```
+2. Install dependencies:
+   ```bash
+   pip install qrcode pillow
+   ```
+
+## Usage
+
+1. **Generate a QR Code with a Logo**:
+   Run the `test.py` script:
+   ```bash
+   python test.py
+   ```
+
+2. **Example Usage**:
+   ```python
+   generate_qr_with_logo("Your Data", "logo.png", "output.png")
+   ```
+   This will generate a QR code with the logo centered and save it as `output.png`.
+
+## Contact
+For issues or suggestions, contact the repository maintainer.
+
+---
